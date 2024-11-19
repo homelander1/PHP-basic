@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Define Chronicle Semibold */
+@font-face {
+    font-family: 'Chronicle';
+    src: url('../assets/fonts/Chronicle-Display-Semibold.otf') format('opentype');
+    font-weight: 600;
+    /* Semibold weight */
+    font-style: normal;
+    /* Adjust if italic or other styles are needed */
+}
+
+/* Define Chronicle Black */
+@font-face {
+    font-family: 'Chronicle';
+    src: url('../assets/fonts/Chronicle-Display-Black.otf') format('opentype');
+    font-weight: 900;
+    /* Black weight */
+    font-style: normal;
+}
+
+/* Define Gilroy Medium */
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    /* Medium weight */
+    font-style: normal;
+}
+
+/* Define Gilroy Bold */
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    /* Bold weight */
+    font-style: normal;
+}
+
+/* Define Gilroy ExtraBold */
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    /* ExtraBold weight */
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: scroll !important;
+    /* Prevent vertical scrolling */
+}
+
+body {
+    font-weight: 400;
+    background-color: #0B1D26;
+    background-image: url(../assets/img/heroBG.png);
+    background-attachment: local;
+    background-repeat: no-repeat;
+
+}
+
+/* .gradient-background{
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0), #000000),
+    url(../assets/img/heroBG.png);
+  
+
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+*/
+button {
+    all: unset;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    margin-top: 64px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header nav {
+    font-family: 'Gilroy';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 1750px;
+    margin: 0 auto;
+    /* Center the nav */
+
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 400;
+    font-family: 'Chronicle';
+    display: inline-block;
+    /* height: 39px; */
+    line-height: 32px;
+}
+
+header nav ul {
+
+    display: flex;
+    gap: 40px;
+    /* Adjust spacing between menu items */
+    margin: 0;
+    padding: 0;
+
+}
+
+header nav ul li {
+
+    display: inline-block;
+}
+
+header nav ul li a:hover {
+    border-bottom: 3px solid #FBD784;
+}
+
+.log-reg {
+    color: #ffffff;
+}
+
+.log-reg:hover {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(77%) sepia(73%) saturate(257%) hue-rotate(349deg) brightness(99%) contrast(99%);
+}
+
+.hero {
+    margin-top: 198px;
+}
+
+.hero-info {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 950px;
+
+}
+
+.hiking-guide {
+    max-width: 316px;
+}
+
+h1 {
+    line-height: 88px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 82px;
+    font-family: 'Chronicle';
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 4px;
+}
+
+/* Social media block */
+.social-block {
+    position: absolute;
+    /* Could also be fixed */
+    top: 359px;
+    left: 80px;
+    z-index: 9;
+    /* A high value to ensure it appears on top */
+
+}
+
+.social-block ul {
+    padding-left: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.social-block li {
+    margin-bottom: 24px;
+}
+
+.social-block li:last-child {
+    margin-bottom: 0;
+}
+
+.social-block ul li a img {
+    transition: filter 0.1s;
+}
+
+.social-block ul li a img:hover {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(73%) saturate(257%) hue-rotate(349deg) brightness(99%) contrast(99%);
+}
+
+.social-block ul li img:hover {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(73%) saturate(257%) hue-rotate(349deg) brightness(99%) contrast(99%);
+}
+
+.followUs {
+    all: unset;
+    display: inline-block;
+    padding: 0px 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.scrollDown {
+    display: inline-block;
+}
+
+/* Scroll down Hero button */
+.scrollDown a img {
+    transition: filter 0.1s;
+    /* Smooth transition */
+}
+
+.scrollDown img:hover {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(73%) saturate(257%) hue-rotate(349deg) brightness(99%) contrast(99%);
+}
+
+/* Common modal styles for both Follow Us and Log In modals */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.modalLog {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    /* Center modal horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 340px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.followUsTitle {
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-family: 'Gilroy', sans-serif;
+    /* Ensure font consistency */
+    font-size: 18px;
+}
+
+.formField {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 36px;
+    /* Increased height for better accessibility */
+    line-height: 18px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    padding: 0px 8px;
+    /* Ensure proper padding inside input fields */
+    border: 1px solid #ccc;
+    /* Ensure border color */
+    font-size: 14px;
+}
+
+.requiredField {
+    color: rgb(251, 84, 84);
+}
+
+.followUs_subscribe {
+    background-color: #edbb46;
+    font-family: 'Gilroy', sans-serif;
+    color: #ffffff;
+    padding: 10px 0px;
+    border: none;
+    font-weight: 700;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    /* Make the button span full width of the modal */
+    text-align: center;
+    /* Center text inside the button */
+    font-size: 16px;
+    /* Ensure proper font size */
+    cursor: pointer;
+    /* Indicate it's clickable */
+}
+
+.followUs_subscribe:hover {
+    background-color: #FBD784;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Gilroy', sans-serif;
+    cursor: pointer;
+    /* Make close button clickable */
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.SignUpLink {
+    color: #000000;
+    margin-top: 24px;
+    text-align: center;
+}
+
+#switchToSignUp {
+
+    color: darkorange;
+    text-decoration: underline;
+}
+
+#switchToLogin {
+
+    color: darkorange;
+    text-decoration: underline;
+}
+
+
+#toast {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.article {
+    margin: 842px auto 0px;
+    height: 2560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+/* 01 */
+
+
+.get_started {
+    width: 1462px;
+    height: 720px;
+    margin: 0 auto;
+    position: relative;
+    /* border: 3px solid #73AD21; */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.section_group {
+    width: 782px;
+}
+
+.number {
+    display: inline-block;
+    margin-top: 33px;
+
+}
+
+.absolute_block {
+    position: relative;
+}
+
+.section_content {
+    position: absolute;
+    top: 103px;
+    left: 150px;
+    /* border: 3px solid #73AD21; */
+    width: 632px;
+    height: 439x;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 68px;
+    font-weight: 600;
+    font-family: 'Chronicle';
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: 'Chronicle';
+}
+
+h5 {
+    color: #ffffff;
+    font-size: 24 px;
+    font-weight: 600;
+    font-family: 'Chronicle';
+    display: inline-block;
+}
+
+p {
+    margin-top: 27px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Gilroy';
+    line-height: 1.5;
+}
+
+.section_content a {
+    display: inline-block;
+    margin-top: 27px;
+}
+
+footer {
+    max-width: 1482px;
+    margin: 200px auto 120px;
+    display: flex;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.footer_one {
+    max-width: 350px;
+}
+
+.footer_one a {
+    margin-bottom: 24px;
+}
+
+.footer_one p {
+    margin-top: 0px;
+    margin-bottom: 122px;
+    font-family: 'Gilroy';
+    font-weight: bold;
+    font-size: 18px;
+    max-width: 303px;
+}
+
+.copyrights {
+    opacity: 0.5;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.links {
+    width: 566px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_title {
+    margin: 0px;
+    font-size: 24px;
+    color: #FBD784;
+}
+
+.footer_link ul li {
+    margin-bottom: 24px;
+    font-family: 'Gilroy';
+    font-size: 18px;
+}
+
+.footer_link ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.footer_link a {
+    margin-bottom: 24px;
+}
+
+.last_link {
+    margin-bottom: 0px;
+}
+
+
+.account-btn:hover {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(73%) saturate(257%) hue-rotate(349deg) brightness(99%) contrast(99%);
+}
+
+/* Equipment  */
+.card-fixed {
+    height: 240px;
+    /* Adjust card height as needed */
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container {
+    width: 150px;
+    height: 100%;
+    /* Adjust width for the image container */
+}
+
+.fixed-image {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    /* Matches the card's rounded corner */
+    border-bottom-left-radius: 0.5rem;
+    /* Matches the card's rounded corner */
+}
+
+.card-body {
+    padding: 10px;
+    flex-grow: 1;
+    /* Ensures the content area takes up remaining space */
+
+}
+
+.card-title {
+    color: #000000;
+    word-break: break-all;
+    white-space: normal;
+    display: block;
+}
+
+.card-text {
+    display: inline-block;
+    color: #000000;
+    word-break: break-all;
+    white-space: normal;
+    height: 54px;
+}
+
+.card-text1 {
+    margin-top: 5px;
+}
+
+/* Dashboard */
+.dashboard-title {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.page-heading {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.list-group {
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 568px;
+}
+
+.list-group-item {
+    height: 142px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modify-article {
+    width: 115px;
+    align-items: center;
+    text-align: center;
+}
+
+.article-image {}
+
+.article-image img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-text {
+    width: 800px;
+    text-align: left;
+}
+
+.article-title {
+    font-weight: bold;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 18px;
+}
+
+.published-content {
+    font-weight: 400;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    max-width: 800px;
+    word-break: break-all;
+    white-space: normal;
+    height: 84px;
+    overflow: hidden;
+}
+
+.published-date {
+    margin-bottom: 25px;
+}
+
+/* Modal - New article */
+
+/* Custom Modal Backdrop */
+.custom-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dimmed background */
+    z-index: 9998;
+    display: none;
+    /* Initially hidden */
+}
+
+.extended {
+    width: 540px;
+}
+
+.formField-area {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    padding: 0px 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.mb-3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload-area2 {
+    max-width: 150px;
+    align-items: center;
+}
+
+/* Create Article modal window */
+#imagePreview {
+    margin-top: 0px !important;
+    display: block;
+    max-width: 130px !important;
+    padding-bottom: 5px;
+    object-fit: contain;
+}
+
+/* Edit Article modal window */
+#editImagePreview {
+    margin-top: 0px !important;
+    display: block;
+    max-width: 130px !important;
+    padding-bottom: 5px;
+    object-fit: contain;
+}
+
+#clearImageBtn {
+    border: 1px solid rgb(255, 76, 76);
+    padding: 5px;
+    border-radius: 4px;
+    color: rgb(255, 76, 76);
+    text-align: center;
+    width: 120px;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.bnt-size-article {
+    width: 98px;
+}
+
+.modal-open {
+    padding: 0px !important;
+
+}
+
+
+.edit-article-btn {
+    color: #fff;
+}
+
+.edit-article-btn:hover {
+    color: #fff;
+}

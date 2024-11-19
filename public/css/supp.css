@@ -1,0 +1,19 @@
+.article-box {
+    min-height: 528px;
+}
+
+
+.btn-primary {
+    background-color: #f8bb2e;
+    border-color: #f8bb2e;
+}
+
+.btn-primary:hover {
+    background-color: #FBD784;
+    border-color: #FBD784;
+}
+
+.page-item.active .page-link {
+    background-color: #f8bb2e;
+    border-color: #f8bb2e;
+}
