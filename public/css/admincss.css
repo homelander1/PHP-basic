@@ -1,0 +1,60 @@
+.container-with-tabs {
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+.nav-link {
+    color: #FBD784;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: blue;
+}
+
+.nav-link:hover {
+    color: darkorange;
+}
+
+.tabs-users {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.users-list {
+    display: flex;
+    flex-direction: column;
+    height: 648px;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.user-name,
+.user-email {
+    flex: 1;
+}
+
+.user-action {
+    margin-left: 10px;
+}
+
+.subscribed-users-list {
+    height: 648px;
+}
+
+.admin-article-group {
+
+    height: 648px;
+}
+
+.published-date {
+    margin-bottom: 0px;
+}

@@ -27,8 +27,9 @@ function registrationForm($data)
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO users (email, password, first_name, last_name, registration_date) VALUES (?, ?, ?, ?, NOW())");
-    $stmt->bind_param("ssss", $email, $hashed_password, $first_name, $last_name);
+    $role_id = 2;
+    $stmt = $conn->prepare("INSERT INTO users (email, password, first_name, last_name, registration_date, role_id) VALUES (?, ?, ?, ?, NOW(),?)");
+    $stmt->bind_param("sssss", $email, $hashed_password, $first_name, $last_name, $role_id);
 
     if (!$stmt->execute()) {
         die("Error executing query: " . $stmt->error);
@@ -65,7 +66,8 @@ function loginUser($data)
     $email = trim($data["login"] ?? '');
     $password = $data["password"] ?? '';
 
-    $stmt = $conn->prepare("SELECT user_id, first_name, last_name, password FROM users WHERE email = ?");
+    // Fetch user details including role_id
+    $stmt = $conn->prepare("SELECT user_id, first_name, last_name, password, role_id FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->store_result();
@@ -74,7 +76,8 @@ function loginUser($data)
         die("No user found with this email.");
     }
 
-    $stmt->bind_result($user_id, $first_name, $last_name, $hashed_password);
+    // Ensure bind_result matches the SELECT query
+    $stmt->bind_result($user_id, $first_name, $last_name, $hashed_password, $role_id);
     $stmt->fetch();
 
     if (!password_verify($password, $hashed_password)) {
@@ -85,7 +88,11 @@ function loginUser($data)
     $_SESSION['last_name'] = $last_name;
     $_SESSION['user_id'] = $user_id;
     $_SESSION['logged_in'] = true;
-    header("Location: user.php");
+    if ($role_id == 1) { //Admin 
+        header("Location: admin.php");
+    } else  if ($role_id == 2) { // Writer
+        header("Location: user.php");
+    }
     exit();
 
     $stmt->close();
